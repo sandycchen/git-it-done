@@ -13,8 +13,8 @@ var getRepoName = function() {
     }
 };
 
-var getRepoIssues = function(repoName) {
-    var apiUrl = "https://api.github.com/repos/" + repoName + "/issues?direction=asc";
+var getRepoIssues = function(repo) {
+    var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
     
     fetch(apiUrl).then(function(response) {
         // request was successful
